@@ -5,13 +5,14 @@ function createNode(grid=16){
         let gridNode = document.createElement('div');
         gridNode.classList.add('node');
         gridNode.setAttribute('id', 'node');
-        gridNode.style.width = (window.innerWidth/grid)+"px";
-        gridNode.style.height = (window.innerHeight/grid)+"px";
+        gridNode.style.width = (500/grid)+"px";
+        gridNode.style.height = (600/grid)+"px";
         divCol.appendChild(gridNode);
         
     }
     let divContainer = document.getElementById('container');
     divContainer.appendChild(divCol);
+    sketch();
 };
 
 function createGrid(){
@@ -34,7 +35,18 @@ function refresh(){
 };
 
 
-// let changeColor = document.getElementById('node');
-// changeColor.addEventListener('mouseover', ()=>{
-//     changeColor.style.backgroundColor = "brown";
+function sketch(){
+    let changeColor = document.getElementById('node');
+    changeColor.addEventListener('mouseover', ()=>{
+        changeColor.style.backgroundColor = "brown";
+    });
+};
+
+// const box = document.getElementById('container');
+// box.addEventListener('mouseover', function handleMouseOver() {
+//   box.classList.add('black');
 // });
+
+
+
+
